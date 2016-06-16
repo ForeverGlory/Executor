@@ -35,7 +35,9 @@ class User extends Mission
 ```
 
 ```php
-$executor = new BundleExecutor();
+use Glory\Executor\Executor;
+
+$executor = new Executor();
 $executor->addNamespace('App\\Install', getRealpath('app\\install'));
 $executor->execute();
 //execute App\Install\*->execute()
